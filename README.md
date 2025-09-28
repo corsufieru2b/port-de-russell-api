@@ -32,3 +32,14 @@ Application web full-stack pour la gestion des réservations de catways du port 
    ```bash
    git clone https://github.com/votre-username/port-de-russell.git
    cd port-de-russell
+
+## 🌐 Déploiement
+
+L'application est déployée sur Render : [https://port-de-russell.onrender.com](https://port-de-russell.onrender.com)
+
+### Compte de démonstration
+- *Email* : capitaine@port-russell.fr
+- *Mot de passe* : monmotdepasse
+
+### Documentation API
+- Documentation interactive : [https://port-de-russell.onrender.com/api-docs](https://port-de-russell.onrender.com/api-docs)
