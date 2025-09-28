@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/dashboard">
+            <i class="fas fa-anchor me-2"></i>Port de Russell
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">
+                        <i class="fas fa-tachometer-alt me-1"></i>Tableau de bord
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catways">
+                        <i class="fas fa-ship me-1"></i>Catways
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservations">
+                        <i class="fas fa-calendar-check me-1"></i>Réservations
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users">
+                        <i class="fas fa-users me-1"></i>Utilisateurs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/api-docs">
+                        <i class="fas fa-book me-1"></i>Documentation API
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user me-1"></i>
+                        <span id="currentUser"><%= user.username %></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><span class="dropdown-item-text small" id="navbarUserEmail">...</span></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><button class="dropdown-item text-danger" onclick="logout()"><i class="fas fa-sign-out-alt me-1"></i>Déconnexion</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+// Afficher l'email dans la navbar
+document.addEventListener('DOMContentLoaded', function() {
+    const userData = localStorage.getItem('user');
+    if (userData) {
+        const user = JSON.parse(userData);
+        document.getElementById('navbarUserEmail').textContent = user.email;
+    }
+});
+</script>

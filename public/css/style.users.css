@@ -1,0 +1,46 @@
+/* public/css/style.css - Ajoutez ces styles */
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.badge {
+    font-size: 0.75em;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* Styles pour les statuts */
+.badge.bg-success { background-color: #198754 !important; }
+.badge.bg-info { background-color: #0dcaf0 !important; }
+.badge.bg-warning { background-color: #ffc107 !important; color: #000 !important; }
+.badge.bg-secondary { background-color: #6c757d !important; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .btn-sm {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.75rem;
+    }
+}
